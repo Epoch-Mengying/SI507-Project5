@@ -1,1 +1,29 @@
-Put your Project 5 brief explanation, as directed, here.
+Project 5 brief explanation
+=============================================================================================
+Application name: MCracker
+=============================================================================================
+Description: 
+
+I am accessing Tumblr search API to gathering:
+Five user's general account information on total number of likes he/she got, total number of likes he/she got, total number of blogs the user is following, the username/title/descriptions of the blogs that the user is following.
+
+- The first CSV file(GeneralInfo.csv) contains three columns. 
+   # First column is the total number of likes he/she got;
+   # Second column is the total number of his/her liked posts; 
+   # Third column is the total number of blogs he/she is following. 
+- For each user, there is one corresponding CSV file(user_FollowedBlogs.csv) that contains three columns.
+   # First column is the user name of the followed blog; 
+   # Second column is the title of the followed blog; 
+   # Third column is the descriptions of the followed blog. 
+
+=============================================================================================
+URLs:
+- Request-token URL:
+  POST https://www.tumblr.com/oauth/request_token
+- Authorize URL:
+  https://www.tumblr.com/oauth/authorize
+- Access-token URL:
+  POST https://www.tumblr.com/oauth/access_token
+=============================================================================================  
+Source: 
+- URL for the Tumblr API documentation: https://www.tumblr.com/docs/en/api/v2
