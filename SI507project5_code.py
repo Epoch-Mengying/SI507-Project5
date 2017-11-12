@@ -285,14 +285,16 @@ if __name__ == "__main__":
     ## Retrieve quote data from thegoodvybe and logicaldreamer; Retrieve text data from NASA 
     write_user_file("thegoodvybe", type = "quote")
     write_user_file("logicaldreamer", type = "quote")
-    write_user_file("nasa", type = "text")  
+    write_user_file("nasa", type = "text")
+    write_user_file("mengyingzhangworld", type = "text") # My newly created blog
+    write_user_file("mengyingzhangworld", type = "quote") # My newly created blog 
     
     if DEBUG: 
         print("Writing files completed.")
         
 # The END 
-##################################################################################################################  
-##################################################################################################################  
+##############################################################################################
+############################################################################################## 
 #-----------------------------------------------------------------------------------------------
 # This line below is only For Helping programmers to do individual testing
     
