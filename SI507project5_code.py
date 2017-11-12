@@ -2,6 +2,7 @@ import requests_oauthlib
 import webbrowser
 import json
 import pandas as pd
+import csv
 import secret_data # need properly formatted file, see example
 from datetime import datetime
 
@@ -258,10 +259,10 @@ def write_user_file(blog_identifier, type = "quote", expire_in_days = 3):
         Counts = [int(count) for count in saved_column]
         index = Counts.index(max(Counts))
         Best_Quote = df.iloc[index, 2]
-        print ("-"*15)
+        print ("-"*25)
         print("The best liked quote in {}'s blog is: {}". format(blog_identifier, str(Best_Quote)))
         print ("The quote received {} likes.".format(max(Counts)))
-        print ("-"*15)
+        print ("-"*25)
        
     elif type == "text":
         filename = "{}_text.csv".format(blog_identifier)
@@ -280,7 +281,8 @@ if __name__ == "__main__":
     if not REQUEST_TOKEN_URL or not BASE_AUTH_URL:
         print("You need to fill in this API's specific OAuth2 URLs in this file.")
         exit()
-        
+    
+    ## Retrieve quote data from thegoodvybe and logicaldreamer; Retrieve text data from NASA 
     write_user_file("thegoodvybe", type = "quote")
     write_user_file("logicaldreamer", type = "quote")
     write_user_file("nasa", type = "text")  
